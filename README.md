@@ -1,7 +1,8 @@
 <div align="center">
 
 <p align="center"><img src="assets/figs/logo/color-full.png" alt="DeepTutor" width="480"></p>
-<h1 align="center">DeepTutor: Lifelong Personalized Tutoring</h1>
+<h1 align="center">DeepTutor MCAT</h1>
+<p align="center">A personal MCAT tutor built on <a href="https://github.com/HKUDS/DeepTutor">HKUDS/DeepTutor</a></p>
 
 <p align="center">
 <a href="https://www.star-history.com/hkuds/deeptutor"><picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending&amp;theme=dark" /><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending" /><img alt="GitHub Trending Repository of the Day" src="https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending" height="55" /></picture></a>&#32;<a href="https://trendshift.io/repositories/17099"><img src="https://trendshift.io/api/badge/trendshift/repositories/17099/daily" alt="HKUDS/DeepTutor | Trendshift" width="250" height="55"></a>&#32;<a href="https://www.star-history.com/hkuds/deeptutor"><picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;theme=dark"><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=HKUDS/DeepTutor"><img alt="Star History Rank" src="https://api.star-history.com/badge?repo=HKUDS/DeepTutor" width="185" height="55"></picture></a>
@@ -34,6 +35,18 @@
 [Features](#-key-features) · [Get Started](#-get-started) · [Explore](#-explore-deeptutor) · [CLI](#%EF%B8%8F-deeptutor-cli--agent-native-interface) · [Ecosystem](#-ecosystem--eduhub--the-skills-community) · [Community](#-community)
 
 </div>
+
+---
+
+## About DeepTutor MCAT
+
+DeepTutor MCAT is a personal fork of [DeepTutor](https://github.com/HKUDS/DeepTutor) set up for studying for the MCAT. It keeps the upstream tutoring features (chat, quizzes, flashcards, knowledge bases) and adds:
+
+- An MCAT tutor persona in the chat prompts: AAMC-style passage reasoning, an explanation of why each wrong answer is wrong, and misses mapped to AAMC content categories and a Miss Category.
+- An `mcat/` folder with a student profile (`mcat/profile.md`) and a condensed AAMC content outline (`mcat/syllabus.md`). Fill in the TODO sections in the profile.
+- Low-cost model defaults: `claude-haiku-5-5` for routine chat, quizzes, and flashcards, and `claude-sonnet-5-5` for heavy reasoning and planning. See `mcat/model_catalog.example.json`. Copy it to `data/user/settings/model_catalog.json` and add your own API key in the Settings page. Do not commit keys.
+
+Credit and license: this project is derived from DeepTutor by HKUDS and remains under the Apache License 2.0. See [LICENSE](LICENSE). The upstream README follows below.
 
 ---
 

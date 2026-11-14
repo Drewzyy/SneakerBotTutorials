@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "_comment": "Seed for data/user/settings/model_catalog.json. Add your API key in the Settings UI or an env-backed connection; do not commit it. 'llm' is the default chat/quiz/flashcard model (Haiku). 'task' holds the heavier Sonnet model for planning and hard reasoning; select it in Settings when needed.",
+  "connections": [],
+  "services": {
+    "llm": {
+      "active_profile_id": "mcat-llm",
+      "active_model_id": "mcat-haiku",
+      "profiles": [
+        {
+          "id": "mcat-llm",
+          "name": "Anthropic (MCAT, cheap default)",
+          "binding": "anthropic",
+          "base_url": "https://api.anthropic.com",
+          "api_key": "",
+          "models": [
+            {"id": "mcat-haiku", "name": "Claude Haiku 5.5", "model": "claude-haiku-5-5"},
+            {"id": "mcat-sonnet", "name": "Claude Sonnet 5.5 (heavy reasoning)", "model": "claude-sonnet-5-5"}
+          ]
+        }
+      ]
+    },
+    "task": {
+      "active_profile_id": "mcat-task",
+      "active_model_id": "mcat-task-sonnet",
+      "profiles": [
+        {
+          "id": "mcat-task",
+          "name": "Anthropic (MCAT, planning)",
+          "binding": "anthropic",
+          "base_url": "https://api.anthropic.com",
+          "api_key": "",
+          "models": [
+            {"id": "mcat-task-sonnet", "name": "Claude Sonnet 5.5", "model": "claude-sonnet-5-5"}
+          ]
+        }
+      ]
+    }
+  }
+}
